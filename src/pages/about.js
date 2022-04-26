@@ -1,4 +1,5 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image'
 
 import Layout from '../components/Layout';
 
@@ -7,8 +8,15 @@ const AboutPage = () => (
     <article id="main">
       <header>
         <h2>About</h2>
-        <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
       </header>
+      <span className="image fit">
+        <StaticImage
+          src="../assets/images/KAP_Management_3.jpg"
+          alt="KAP Management"
+          placeholder="blurred"
+          objectFit="contain"
+        />
+      </span>
     </article>
   </Layout>
 );
