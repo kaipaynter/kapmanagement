@@ -1737,9 +1737,13 @@ module.exports = Object.assign;
 exports.components = {
   "component---cache-dev-404-page-js": () => __webpack_require__.e(/*! import() | component---cache-dev-404-page-js */ "component---cache-dev-404-page-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../dev-404-page.js */ "./.cache/dev-404-page.js")),
   "component---src-pages-404-js": () => __webpack_require__.e(/*! import() | component---src-pages-404-js */ "component---src-pages-404-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/404.js */ "./src/pages/404.js")),
+  "component---src-pages-about-js": () => __webpack_require__.e(/*! import() | component---src-pages-about-js */ "component---src-pages-about-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/About.js */ "./src/pages/About.js")),
+  "component---src-pages-contact-js": () => __webpack_require__.e(/*! import() | component---src-pages-contact-js */ "component---src-pages-contact-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/Contact.js */ "./src/pages/Contact.js")),
   "component---src-pages-elements-js": () => __webpack_require__.e(/*! import() | component---src-pages-elements-js */ "component---src-pages-elements-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/Elements.js */ "./src/pages/Elements.js")),
   "component---src-pages-generic-js": () => __webpack_require__.e(/*! import() | component---src-pages-generic-js */ "component---src-pages-generic-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/Generic.js */ "./src/pages/Generic.js")),
-  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js */ "./src/pages/index.js"))
+  "component---src-pages-index-js": () => __webpack_require__.e(/*! import() | component---src-pages-index-js */ "component---src-pages-index-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/index.js */ "./src/pages/index.js")),
+  "component---src-pages-locations-js": () => __webpack_require__.e(/*! import() | component---src-pages-locations-js */ "component---src-pages-locations-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/Locations.js */ "./src/pages/Locations.js")),
+  "component---src-pages-submissions-js": () => __webpack_require__.e(/*! import() | component---src-pages-submissions-js */ "component---src-pages-submissions-js").then(__webpack_require__.bind(__webpack_require__, /*! ./../../../src/pages/Submissions.js */ "./src/pages/Submissions.js"))
 };
 
 /***/ }),
