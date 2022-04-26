@@ -1,17 +1,17 @@
 module.exports = {
-  siteTitle: 'Gatsby Starter Spectral', // <title>
-  manifestName: 'Spectral',
+  siteTitle: 'KAP Management', // <title>
+  manifestName: 'KAP Management',
   manifestShortName: 'Landing', // max 12 characters
   manifestStartUrl: '/',
   manifestBackgroundColor: '#663399',
   manifestThemeColor: '#663399',
   manifestDisplay: 'standalone',
   manifestIcon: 'src/assets/img/website-icon.png',
-  pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
+  //pathPrefix: `/gatsby-starter-spectral/`, // This path is subpath of your hosting https://domain/portfolio
   heading: 'KAP Management',
   //subHeading: 'Full time Web Developer. Part time Open source contributor  ',
   // social
-  socialLinks: [
+  /* socialLinks: [
     {
       style: 'brands',
       icon: 'fa-github',
@@ -30,5 +30,5 @@ module.exports = {
       name: 'Email',
       url: 'mailto:test@example.com',
     },
-  ],
+  ], */
 };
