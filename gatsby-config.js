@@ -1,9 +1,11 @@
 const config = require('./config');
 
 module.exports = {
-  pathPrefix: config.pathPrefix,
+  //pathPrefix: config.pathPrefix,
   siteMetadata: {
     title: config.siteTitle,
+    description: config.siteDescription,
+    siteUrl: `https://kapmgmt.paynterperformance.com/`,
   },
   plugins: [
     'gatsby-plugin-react-helmet',

@@ -35,7 +35,7 @@
     "branchCleanup": "git branch -D gh-pages",
     "branchSetup": "git checkout -b gh-pages",
     "deploy": "gatsby build && gh-pages -d public",
-    "reset": "git checkout master",
+    "reset": "git checkout -f main",
     "deploy:full": "npm run branchCleanup && npm run branchSetup && npm run deploy && npm run reset"
   },
   "devDependencies": {
@@ -52,5 +52,5 @@
   "bugs": {
     "url": "https://github.com/anubhavsrivastava/gatsby-starter-spectral/issues"
   },
-  "homepage": "https://github.com/anubhavsrivastava/gatsby-starter-spectral#readme"
+  "homepage": "https://kapmgmt.paynterperformance.com"
 }
