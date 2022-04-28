@@ -6,6 +6,7 @@ module.exports = {
     title: config.siteTitle,
     description: config.siteDescription,
     siteUrl: `https://kapmgmt.paynterperformance.com/`,
+    image: "/images/icon.jpg",
   },
   plugins: [
     'gatsby-plugin-react-helmet',
