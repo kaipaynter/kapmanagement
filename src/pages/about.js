@@ -11,7 +11,7 @@ const AboutPage = () => (
       </header>
       <span className="image fit">
         <StaticImage
-          src="../assets/images/KAP_Managment_3.5.jpg"
+          src="../assets/images/KAP_Management_Blank.jpeg"
           alt="KAP Management"
           placeholder="blurred"
           objectFit="contain"

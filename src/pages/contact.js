@@ -11,25 +11,19 @@ const ContactPage = () => (
     </article>
     <section className="main">
       <form method="post" action="https://formspree.io/f/mvodweje">
-        <label>
-          Name
+        <div className="field half first">
+          <label htmlFor="name">Name</label>
           <input type="text" name="name" id="name" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="_replyto" id="email" />
-        </label>
-        <label>
-          Subject
-          <input type="text" name="subject" id="subject" />
-        </label>
-        <label>
-          Message
-          <textarea name="message" id="message" rows="5" />
-        </label>
-        <button type="submit" className="button special">
-          Send
-        </button>
+        </div>
+        <div className="field half">
+          <label htmlFor="email">Email</label>
+          <input type="text" name="_replyto" id="email" />
+        </div>
+        <div className="field">
+          <label htmlFor="message">Message</label>
+          <textarea name="message" id="message" rows="4"></textarea>
+        </div>
+        <input type="submit" value="Send" className="button special" /> &nbsp;
         <input type="reset" value="Clear" />
       </form>
     </section>
