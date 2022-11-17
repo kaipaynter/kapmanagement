@@ -12,7 +12,9 @@ var _reachRouter = require("@gatsbyjs/reach-router");
 
 var _gatsbyReactRouterScroll = require("gatsby-react-router-scroll");
 
-var _gatsby = require("gatsby");
+var _staticQuery = require("./static-query");
+
+var _context = require("./slice/context");
 
 var _navigation = require("./navigation");
 
@@ -30,27 +32,16 @@ var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
 
 var _matchPaths = _interopRequireDefault(require("$virtual/match-paths.json"));
 
-/* global HAS_REACT_18 */
+var _reactDomUtils = require("./react-dom-utils");
+
 // Generated during bootstrap
 const loader = new _loader.ProdLoader(_asyncRequires.default, _matchPaths.default, window.pageData);
 (0, _loader.setLoader)(loader);
 loader.setApiRunner(_apiRunnerBrowser.apiRunner);
-let reactHydrate;
-let reactRender;
-
-if (HAS_REACT_18) {
-  const reactDomClient = require(`react-dom/client`);
-
-  reactRender = (Component, el) => reactDomClient.createRoot(el).render(Component);
-
-  reactHydrate = (Component, el) => reactDomClient.hydrateRoot(el, Component);
-} else {
-  const reactDomClient = require(`react-dom`);
-
-  reactRender = reactDomClient.render;
-  reactHydrate = reactDomClient.hydrate;
-}
-
+const {
+  render,
+  hydrate
+} = (0, _reactDomUtils.reactDOMUtils)();
 window.asyncRequires = _asyncRequires.default;
 window.___emitter = _emitter.default;
 window.___loader = _loader.publicLoader;
@@ -80,6 +71,10 @@ const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
 
   const DataContext = /*#__PURE__*/_react.default.createContext({});
 
+  const slicesContext = {
+    renderEnvironment: `browser`
+  };
+
   class GatsbyRoot extends _react.default.Component {
     render() {
       const {
@@ -94,14 +89,21 @@ const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
         location
       }) => {
         const staticQueryResults = (0, _loader.getStaticQueryResults)();
-        return /*#__PURE__*/_react.default.createElement(_gatsby.StaticQueryContext.Provider, {
+        const sliceResults = (0, _loader.getSliceResults)();
+        return /*#__PURE__*/_react.default.createElement(_staticQuery.StaticQueryContext.Provider, {
           value: staticQueryResults
+        }, /*#__PURE__*/_react.default.createElement(_context.SlicesContext.Provider, {
+          value: slicesContext
+        }, /*#__PURE__*/_react.default.createElement(_context.SlicesResultsContext.Provider, {
+          value: sliceResults
+        }, /*#__PURE__*/_react.default.createElement(_context.SlicesMapContext.Provider, {
+          value: pageResources.page.slicesMap
         }, /*#__PURE__*/_react.default.createElement(DataContext.Provider, {
           value: {
             pageResources,
             location
           }
-        }, children));
+        }, children)))));
       }));
     }
 
@@ -236,10 +238,10 @@ const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
     const focusEl = document.getElementById(`gatsby-focus-wrapper`); // Client only pages have any empty body so we just do a normal
     // render to avoid React complaining about hydration mis-matches.
 
-    let defaultRenderer = reactRender;
+    let defaultRenderer = render;
 
     if (focusEl && focusEl.children.length) {
-      defaultRenderer = reactHydrate;
+      defaultRenderer = hydrate;
     }
 
     const renderer = (0, _apiRunnerBrowser.apiRunner)(`replaceHydrateFunction`, undefined, defaultRenderer)[0];
@@ -267,5 +269,7 @@ const reloadStorageKey = `gatsby-reload-compilation-hash-match`;
       doc.addEventListener(`DOMContentLoaded`, handler, false);
       window.addEventListener(`load`, handler, false);
     }
+
+    return;
   });
 });

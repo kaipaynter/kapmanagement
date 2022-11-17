@@ -3,9 +3,9 @@
 var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
 
 exports.__esModule = true;
-exports.cleanPath = exports.findPath = exports.grabMatchParams = exports.findMatchPath = exports.setMatchPaths = void 0;
+exports.setMatchPaths = exports.grabMatchParams = exports.findPath = exports.findMatchPath = exports.cleanPath = void 0;
 
-var _utils = require("@gatsbyjs/reach-router/lib/utils");
+var _reachRouter = require("@gatsbyjs/reach-router");
 
 var _stripPrefix = _interopRequireDefault(require("./strip-prefix"));
 
@@ -75,7 +75,7 @@ const findMatchPath = rawPathname => {
       originalPath: path
     };
   });
-  const path = (0, _utils.pick)(pickPaths, trimmedPathname);
+  const path = (0, _reachRouter.pick)(pickPaths, trimmedPathname);
 
   if (path) {
     return (0, _normalizePagePath.default)(path.route.originalPath);
@@ -107,7 +107,7 @@ const grabMatchParams = rawPathname => {
       originalPath: path
     };
   });
-  const path = (0, _utils.pick)(pickPaths, trimmedPathname);
+  const path = (0, _reachRouter.pick)(pickPaths, trimmedPathname);
 
   if (path) {
     return path.params;
