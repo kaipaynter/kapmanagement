@@ -28,7 +28,7 @@
     "react-images": "^1.2.0-beta.7",
     "react-scrollspy": "^3.4.2",
     "sass": "^1.56.1",
-    "sharp": "^0.31.2",
+    "sharp": "^0.31.3",
     "smoothscroll-polyfill": "^0.4.4"
   },
   "scripts": {
