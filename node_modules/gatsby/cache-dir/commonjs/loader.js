@@ -354,7 +354,7 @@ class BaseLoader {
       });
     }
 
-    const url = `/slice-data/${sliceName}.json`;
+    const url = `${__PATH_PREFIX__}/slice-data/${sliceName}.json`;
     return doFetch(url, `GET`).then(res => {
       const jsonPayload = JSON.parse(res.responseText);
       this.slicesDataDb.set(sliceName, jsonPayload);
