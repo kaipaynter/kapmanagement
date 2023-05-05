@@ -6,7 +6,6 @@ const LocationsPage = () => (
   <Layout fullMenu>
     <article id="main">
       <header>
-        <h2>Locations</h2>
       </header>
       <p className='center'>
         Sydney, Australia

@@ -6,7 +6,6 @@ const ContactPage = () => (
   <Layout fullMenu>
     <article id="main">
       <header>
-        <h2>Contact</h2>
       </header>
     </article>
     <section className="main">
