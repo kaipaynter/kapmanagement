@@ -14,7 +14,7 @@
     "engine.io": "^6.5.4",
     "gatsby": "^5.13.1",
     "gatsby-plugin-image": "^3.13.0",
-    "gatsby-plugin-manifest": "^5.13.0",
+    "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-offline": "^6.13.0",
     "gatsby-plugin-react-helmet": "^6.13.0",
     "gatsby-plugin-sass": "^6.13.1",
