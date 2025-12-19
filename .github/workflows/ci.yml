@@ -15,20 +15,21 @@ jobs:
       # Checkout the project source files to the Github Action runner.
       # This is roughly equivalent to running `git checkout`.
       - name: Checkout source
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       # Install the version of Node.js used by project.
       - name: Setup node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4 # Updated to v4
         with:
           node-version: "20.16.0"
           cache: "npm"
-          cache-dependency-path: package-lock.json  # Explicit dependency file for caching
+          # Using a wildcard or specific path ensures the cache is keyed correctly
+          cache-dependency-path: "**/package-lock.json"
       # Install package dependencies as defined in package.json file in root of project.
       - name: Install dependencies
-        run: npm install
+        run: npm ci
       # Run `gatsby build`.
       - name: Build project
-        run: npm run build
+        run: npx gatsby clean && npm run build
       # Run the Jest unit tests and generate a coverage report.
       # - name: test
        # run: npm test -- --coverage
