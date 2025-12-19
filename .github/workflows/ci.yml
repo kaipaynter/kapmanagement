@@ -7,25 +7,29 @@ jobs:
   # This workflow has just a single job named `ci`.
   ci:
     # Run this job on a Github hosted action runner with the latest version of ubuntu installed.
+    permissions:
+      contents: read
     runs-on: ubuntu-latest
     # A job has one or more steps.
     steps:
       # Checkout the project source files to the Github Action runner.
       # This is roughly equivalent to running `git checkout`.
       - name: Checkout source
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
       # Install the version of Node.js used by project.
       - name: Setup node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4 # Updated to v4
         with:
-          node-version: "18"
+          node-version: "20.16.0"
           cache: "npm"
+          # Using a wildcard or specific path ensures the cache is keyed correctly
+          cache-dependency-path: "**/package-lock.json"
       # Install package dependencies as defined in package.json file in root of project.
-      - name: install
-        run: npm install
+      - name: Install dependencies
+        run: npm ci
       # Run `gatsby build`.
-      - name: build
-        run: npm run build
+      - name: Build project
+        run: npx gatsby clean && npm run build
       # Run the Jest unit tests and generate a coverage report.
       # - name: test
        # run: npm test -- --coverage
