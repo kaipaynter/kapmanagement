@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkkapmanagement=self.webpackChunkkapmanagement||[]).push([[682],{5465:function(e,a,n){n.r(a);var t=n(7294),l=n(2737);a.default=()=>t.createElement(l.Z,{fullMenu:!0},t.createElement("article",{id:"main"},t.createElement("header",null),t.createElement("p",{className:"center"},"Exclusive bi-coastal talent management company representing emerging actors & models across LA, NYC, Toronto, Sydney, Melbourne, & Brisbane.")))}}]);
-//# sourceMappingURL=component---src-pages-about-js-642b5dba97cb000421c7.js.map

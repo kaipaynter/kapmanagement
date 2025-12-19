@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkkapmanagement=self.webpackChunkkapmanagement||[]).push([[125],{3331:function(e,a,n){n.r(a);var t=n(6540),l=n(9463);a.default=()=>t.createElement(l.A,{fullMenu:!0},t.createElement("article",{id:"main"},t.createElement("header",null,t.createElement("h2",null,"Not Found"),t.createElement("p",null,"Not a Valid URL"))))}}]);
+//# sourceMappingURL=component---src-pages-404-js-18335fe89c662f14559b.js.map

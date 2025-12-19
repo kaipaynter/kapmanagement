@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkkapmanagement=self.webpackChunkkapmanagement||[]).push([[921],{4599:function(e,a,n){n.r(a);var t=n(6540),l=n(9463);a.default=()=>t.createElement(l.A,{fullMenu:!0},t.createElement("article",{id:"main"},t.createElement("header",null),t.createElement("p",{className:"center"},"Sydney, Australia",t.createElement("br",null),"2130"),t.createElement("p",{className:"center"},"Los Angeles, CA",t.createElement("br",null),"90002")))}}]);
+//# sourceMappingURL=component---src-pages-locations-js-c8d836a07718536f3141.js.map
