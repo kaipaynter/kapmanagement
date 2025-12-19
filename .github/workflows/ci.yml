@@ -28,7 +28,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
       # Run `gatsby build`.
-      - name: Build project
+      - name: Build with Gatsby
+        env:
+          PREFIX_PATHS: 'true'
+        # 'gatsby clean' is now handled inside 'npm run build' or called explicitly
         run: npx gatsby clean && npm run build
       # Run the Jest unit tests and generate a coverage report.
       # - name: test
