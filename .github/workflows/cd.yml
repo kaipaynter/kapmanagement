@@ -28,7 +28,9 @@ jobs:
         run: npm ci
 
       - name: Build
-        # Clean ensures no stale artifacts from previous runs interfere with the build
+        env:
+          PREFIX_PATHS: 'true'
+        # 'gatsby clean' is now handled inside 'npm run build' or called explicitly
         run: npx gatsby clean && npm run build
 
       - name: Deploy to Github Pages
